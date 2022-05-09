@@ -1,0 +1,28 @@
+path_config:
+  input_data_path: "..src/data/heart_cleveland_upload.csv"
+  output_path: "../models/"
+split_params:
+  val_size: 0.2
+  random_state: 42
+train_params:
+  n_estimators: 100
+  max_depth: 4
+  random_state: 17
+  criterion: "gini"
+feature_params:
+  categorical_features:
+    - "sex"
+    - "cp"
+    - "fbs"
+    - "restecg"
+    - "exang"
+    - "slope"
+    - "ca"
+    - "thal"
+  numerical_features:
+    - "age"
+    - "trestbps"
+    - "chol"
+    - "thalach"
+    - "oldpeak"
+  target_col: "condition"
